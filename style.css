@@ -1,0 +1,137 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --ff: "Red Hat Display", sans-serif;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./images/pattern-background-mobile.svg") no-repeat center;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.entire-component {
+  border: 2px solid var(--Very-pale-blue);
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  height: 90vh;
+  background-color: rgb(255, 253, 253);
+}
+
+.component-illustration img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.component-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.component-heading h3 {
+  font-family: var(--ff);
+  font-weight: 900;
+  color: var(--Dark-blue);
+}
+
+.component-body {
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.component-body p {
+  font-family: var(--ff);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--Desaturated-blue);
+}
+
+.component-iteractive {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--Very-pale-blue);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+.component-iteractive-first {
+  align-self: center;
+}
+
+.component-iteractive-first p:nth-child(1) {
+  /* font-size: 5rem; */
+  font-family: var(--ff);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--Dark-blue);
+}
+
+.component-iteractive-second a {
+  text-decoration: none;
+  color: var(--Dark-blue);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 375px) {
+  /* body {
+    background: url("./images/pattern-background-desktop.svg") center;
+  } */
+  main {
+    /* width: 20%; */
+  }
+  .component-illustration {
+    /* max-width: 100%; */
+  }
+  .entire-component {
+    /* width: 50%; */
+  }
+}
